@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resurslar — Yasin Hüseynov | Bodybuilding Coach</title>
+    <meta
+      name="description"
+      content="BMI, kalori (TDEE) və 1RM kalkulyatorları, həmçinin məşq və qidalanma elmi haqqında qısa məqalələr."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%2315171B'/%3E%3Ccircle cx='50' cy='50' r='34' fill='none' stroke='%23C89B3C' stroke-width='6'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="nav__inner">
+        <a href="index.html" class="brand">
+          <strong>Yasin Hüseynov</strong>
+          <span>Bodybuilding Coach</span>
+        </a>
+        <nav class="nav__links" aria-label="Əsas naviqasiya">
+          <a href="index.html">Ana Səhifə</a>
+          <a href="haqqimda.html">Haqqımda</a>
+          <a href="xidmetler.html">Xidmətlər</a>
+          <a href="qalereya.html">Qalereya</a>
+          <a href="resurslar.html" aria-current="page">Resurslar</a>
+          <a href="elaqe.html">Əlaqə</a>
+        </nav>
+        <a href="elaqe.html" class="btn btn--bronze nav__cta"
+          >Pulsuz Məsləhət</a
+        >
+        <button class="nav__burger" aria-label="Menyu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="nav__mobile">
+        <a href="index.html">Ana Səhifə</a>
+        <a href="haqqimda.html">Haqqımda</a>
+        <a href="xidmetler.html">Xidmətlər</a>
+        <a href="qalereya.html">Qalereya</a>
+        <a href="resurslar.html">Resurslar</a>
+        <a href="elaqe.html">Əlaqə</a>
+        <a href="elaqe.html" class="btn btn--bronze">Pulsuz Məsləhət</a>
+      </div>
+    </header>
+
+    <section class="page-hero">
+      <div class="wrap">
+        <div class="crumb">
+          <a href="index.html">Ana Səhifə</a><span class="sep">/</span>Resurslar
+        </div>
+        <span class="eyebrow">Bilik bazası</span>
+        <h1>Kalkulyatorlar və Elmi Məqalələr</h1>
+        <p class="lead">
+          Öz rəqəmlərini hesabla, məşq elmindəki əsas prinsipləri qısaca oxu.
+          Nəticələr ümumi təxminlərdir — fərdi proqram üçün mütləq məsləhətləşmə
+          lazımdır.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== KALKULYATORLAR ===== -->
+    <section class="section--tight">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Alətlər</span>
+          <h2>Kalkulyatorlar</h2>
+        </div>
+
+        <div class="grid grid-3">
+          <!-- BMI -->
+          <div class="card calc-card" data-reveal>
+            <div class="card__icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="4" y="3" width="16" height="18" rx="2" />
+                <line x1="8" y1="8" x2="16" y2="8" />
+                <line x1="8" y1="12" x2="13" y2="12" />
+              </svg>
+            </div>
+            <h3>BMI Kalkulyatoru</h3>
+            <p class="body-text">
+              Bədən kütlə indeksini boy və çəkiyə görə hesabla.
+            </p>
+            <form id="bmiForm" class="u-mt-lg" style="margin-top: 1.1rem">
+              <div class="field">
+                <label for="bmiHeight">Boy (sm)</label>
+                <input
+                  type="number"
+                  id="bmiHeight"
+                  min="100"
+                  max="250"
+                  step="1"
+                  placeholder="məs. 178"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="bmiWeight">Çəki (kq)</label>
+                <input
+                  type="number"
+                  id="bmiWeight"
+                  min="30"
+                  max="300"
+                  step="0.1"
+                  placeholder="məs. 82"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn--bronze btn--block btn--sm">
+                Hesabla
+              </button>
+            </form>
+            <div class="calc-result" id="bmiResult">
+              <div class="calc-result__value" id="bmiValue">—</div>
+              <div class="calc-result__label" id="bmiCategory">Kateqoriya</div>
+            </div>
+          </div>
+
+          <!-- TDEE -->
+          <div class="card calc-card" data-reveal>
+            <div class="card__icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M12 2C9 6 6 9.5 6 13.5A6 6 0 0 0 18 13.5C18 9.5 15 6 12 2z"
+                />
+              </svg>
+            </div>
+            <h3>Kalori (TDEE) Kalkulyatoru</h3>
+            <p class="body-text">
+              Günlük saxlama kalorini (Mifflin-St Jeor düsturu) hesabla.
+            </p>
+            <form id="tdeeForm" style="margin-top: 1.1rem">
+              <div class="field">
+                <label for="tdeeGender">Cins</label>
+                <select id="tdeeGender" required>
+                  <option value="male">Kişi</option>
+                  <option value="female">Qadın</option>
+                </select>
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="tdeeAge">Yaş</label>
+                  <input
+                    type="number"
+                    id="tdeeAge"
+                    min="14"
+                    max="90"
+                    placeholder="məs. 27"
+                    required
+                  />
+                </div>
+                <div class="field">
+                  <label for="tdeeHeight">Boy (sm)</label>
+                  <input
+                    type="number"
+                    id="tdeeHeight"
+                    min="100"
+                    max="250"
+                    placeholder="məs. 178"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <label for="tdeeWeight">Çəki (kq)</label>
+                <input
+                  type="number"
+                  id="tdeeWeight"
+                  min="30"
+                  max="300"
+                  step="0.1"
+                  placeholder="məs. 82"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="tdeeActivity">Fiziki aktivlik</label>
+                <select id="tdeeActivity" required>
+                  <option value="1.2">Az hərəkətli (masa arxası iş)</option>
+                  <option value="1.375">Yüngül aktiv (həftədə 1-3 məşq)</option>
+                  <option value="1.55" selected>
+                    Orta aktiv (həftədə 3-5 məşq)
+                  </option>
+                  <option value="1.725">Çox aktiv (həftədə 6-7 məşq)</option>
+                  <option value="1.9">
+                    Həddindən çox aktiv (fiziki iş + məşq)
+                  </option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn--bronze btn--block btn--sm">
+                Hesabla
+              </button>
+            </form>
+            <div class="calc-result" id="tdeeResult">
+              <div class="calc-result__value" id="tdeeValue">—</div>
+              <div class="calc-result__label">Kkal / gün (saxlama)</div>
+              <p class="calc-result__note" id="tdeeNote"></p>
+            </div>
+          </div>
+
+          <!-- 1RM -->
+          <div class="card calc-card" data-reveal>
+            <div class="card__icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2.5" y="9" width="3" height="6" rx="1" />
+                <rect x="18.5" y="9" width="3" height="6" rx="1" />
+                <rect x="5.5" y="7" width="2.4" height="10" rx="1" />
+                <rect x="16.1" y="7" width="2.4" height="10" rx="1" />
+                <line x1="7.9" y1="12" x2="16.1" y2="12" />
+              </svg>
+            </div>
+            <h3>1RM (Max Sıxma) Kalkulyatoru</h3>
+            <p class="body-text">
+              Bir təkrarlıq maksimum çəkini (Epley düsturu) təxmin et.
+            </p>
+            <form id="rmForm" style="margin-top: 1.1rem">
+              <div class="field">
+                <label for="rmWeight">Qaldırdığın çəki (kq)</label>
+                <input
+                  type="number"
+                  id="rmWeight"
+                  min="1"
+                  max="500"
+                  step="0.5"
+                  placeholder="məs. 100"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="rmReps">Təkrar sayı</label>
+                <input
+                  type="number"
+                  id="rmReps"
+                  min="1"
+                  max="15"
+                  placeholder="məs. 5"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn--bronze btn--block btn--sm">
+                Hesabla
+              </button>
+            </form>
+            <div class="calc-result" id="rmResult">
+              <div class="calc-result__value" id="rmValue">—</div>
+              <div class="calc-result__label">Təxmini 1RM (kq)</div>
+              <p class="calc-result__note">
+                Düstur: 1 təkrardan çox olan setlərdən təxmin — real maksimum
+                fərqli ola bilər.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ELMİ MƏQALƏLƏR ===== -->
+    <section class="section--tight section--chalk2">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Qısa oxu</span>
+          <h2>Elmi Məqalələr</h2>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card article-card" data-reveal>
+            <span class="article-card__tag">Məşq elmi</span>
+            <h3>Proqressiv Overload: Böyümənin Əsas Şərti</h3>
+            <p class="body-text">
+              Əzələ ancaq əvvəlki həftədən daha çox tələb qarşısında qalanda
+              böyüməyə davam edir — çəki, təkrar sayı və ya set həcmini tədricən
+              artıraraq. Eyni çəki ilə aylarla işləmək platoya aparır;
+              irəliləyişi qeyd etmək (proqram jurnalı) bunu izləməyin ən sadə
+              yoludur.
+            </p>
+          </div>
+
+          <div class="card article-card" data-reveal>
+            <span class="article-card__tag">Qidalanma</span>
+            <h3>Protein Alımı: Nə Qədər Kifayətdir?</h3>
+            <p class="body-text">
+              Əzələ kütləsini qorumaq və artırmaq üçün ümumi elmi tövsiyə bədən
+              çəkisinin hər kiloqramına 1.6–2.2 qram proteindir. Bunu 3-4 öyünə
+              bölmək, tək dəfəyə böyük miqdar qəbul etməkdən sintez baxımından
+              daha səmərəlidir.
+            </p>
+          </div>
+
+          <div class="card article-card" data-reveal>
+            <span class="article-card__tag">Bərpa</span>
+            <h3>Yuxu: Nəzərə Alınmayan Performans Amili</h3>
+            <p class="body-text">
+              Böyümə hormonu ifrazının böyük hissəsi dərin yuxu zamanı baş
+              verir. Gecədə 7 saatdan az yuxu, eyni məşq və qidalanma ilə belə,
+              gücdə və bərpa sürətində geriləməyə səbəb ola bilər — proqramın
+              bir hissəsi kimi planlaşdırılmalıdır.
+            </p>
+          </div>
+
+          <div class="card article-card" data-reveal>
+            <span class="article-card__tag">Yarış hazırlığı</span>
+            <h3>Karb Dövriyyəsi Nədir?</h3>
+            <p class="body-text">
+              Karb dövriyyəsi — həftə ərzində karbohidrat miqdarını məşq
+              intensivliyinə görə dəyişdirmək deməkdir: ağır məşq günləri
+              yüksək, yüngül günlər aşağı karb. Bu, enerji səviyyəsini qorumaqla
+              yanaşı, yağ itkisi dövründə əzələ dolğunluğunu saxlamağa kömək
+              edir.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="wrap">
+        <div class="cta-band" data-reveal>
+          <div>
+            <h2>Rəqəmlər bir başlanğıcdır, fərdi plan isə nəticədir</h2>
+            <p>
+              Kalkulyator ümumi təxmindir — sənin bədəninə uyğun dəqiq proqram
+              üçün birlikdə işləyək.
+            </p>
+          </div>
+          <a href="elaqe.html" class="btn btn--bronze">Pulsuz məsləhət al</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <strong
+              style="
+                font-family: var(--f-display);
+                font-size: 1.3rem;
+                color: var(--bone);
+                text-transform: uppercase;
+              "
+              >Yasin Hüseynov</strong
+            >
+            <p>
+              IFBB Pro bodibilder və şəxsi fitness məşqçisi. Bakıda üz-üzə,
+              dünyanın istənilən yerindən onlayn.
+            </p>
+            <div class="footer__social">
+              <a href="#" aria-label="Instagram"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.3" cy="6.7" r="1" /></svg
+              ></a>
+              <a href="#" aria-label="Facebook"
+                ><svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M13.5 21v-7.2h2.4l.4-2.8h-2.8v-1.8c0-.8.2-1.3 1.4-1.3h1.5V5.4c-.3 0-1.1-.1-2.1-.1-2.1 0-3.6 1.3-3.6 3.7v2.1H8.3v2.8h2.4V21h2.8z"
+                  /></svg
+              ></a>
+              <a
+                href="https://wa.me/994501234567"
+                target="_blank"
+                rel="noopener"
+                aria-label="WhatsApp"
+                ><svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.2-3.6-.8-3-1.2-4.9-4.2-5-4.4-.1-.2-1.2-1.6-1.2-3 0-1.4.7-2.1 1-2.4.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.2.3-.3.5-.2.2-.3.3-.1.6.2.3.9 1.4 1.9 2.3 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.2.7-.1.3.1 1.8.9 2.1 1 .3.2.5.2.6.3.1.2.1.9-.1 1.6z"
+                  /></svg
+              ></a>
+            </div>
+          </div>
+          <div class="footer__col">
+            <h4>Naviqasiya</h4>
+            <ul>
+              <li><a href="haqqimda.html">Haqqımda</a></li>
+              <li><a href="xidmetler.html">Xidmətlər</a></li>
+              <li><a href="qalereya.html">Qalereya</a></li>
+              <li><a href="resurslar.html">Resurslar</a></li>
+              <li><a href="elaqe.html">Əlaqə</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Xidmətlər</h4>
+            <ul>
+              <li><a href="xidmetler.html">Fərdi Məşq</a></li>
+              <li><a href="xidmetler.html">Onlayn Məşqçilik</a></li>
+              <li><a href="xidmetler.html">Yarış Hazırlığı</a></li>
+              <li><a href="xidmetler.html">Qidalanma Planı</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Əlaqə</h4>
+            <ul>
+              <li><a href="tel:+994501234567">+994 50 123 45 67</a></li>
+              <li>
+                <a href="mailto:info@kamranaliyev.az">info@kamranaliyev.az</a>
+              </li>
+              <li>Bakı, Azərbaycan</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span
+            >© <span data-year></span> Yasin Hüseynov. Bütün hüquqlar
+            qorunur.</span
+          >
+          <span
+            >Sayt nümunə məzmunla hazırlanıb — şəkil və qiymətlər
+            dəyişdirilməlidir.</span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="https://wa.me/994501234567"
+      target="_blank"
+      rel="noopener"
+      class="wa-float"
+      aria-label="WhatsApp ilə yaz"
+    >
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.2-3.6-.8-3-1.2-4.9-4.2-5-4.4-.1-.2-1.2-1.6-1.2-3 0-1.4.7-2.1 1-2.4.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.2.3-.3.5-.2.2-.3.3-.1.6.2.3.9 1.4 1.9 2.3 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.2.7-.1.3.1 1.8.9 2.1 1 .3.2.5.2.6.3.1.2.1.9-.1 1.6z"
+        />
+      </svg>
+    </a>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
