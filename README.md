@@ -51,8 +51,8 @@ Sadəcə `index.html`-i brauzerdə açın. Server lazım deyil.
 4. **Əlaqə məlumatları** — bütün səhifələrin footer və `elaqe.html`
    hissəsində geçən:
    - Telefon: `+994 50 123 45 67`
-   - E-poçt: `info@kamranaliyev.az`
-   - WhatsApp linki: `https://wa.me/994501234567`
+   - E-poçt: ``
+   - WhatsApp linki: `https://wa.me/994516693500`
      (bunları hər fayldа tapıb öz nömrənizlə/ünvanınızla dəyişin —
      WhatsApp linki `994` ilə başlayıb boşluqsuz, `+` işarəsiz yazılmalıdır)
 
